@@ -20,6 +20,7 @@ phases:
       - apt-get update && apt-get -y install jq  && pip install --upgrade awscli
   pre_build:
       commands:
+        - npm install
         - pip3 install --upgrade pip
         - pip3 install -r requirements.txt
         - python -m pytest test_main.py
